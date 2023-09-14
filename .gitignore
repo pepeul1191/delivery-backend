@@ -19,3 +19,5 @@ dist
 public/uploads
 public/templates
 tmp
+package.json.*
+package-lock.json

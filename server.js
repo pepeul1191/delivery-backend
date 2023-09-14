@@ -2,7 +2,8 @@ const express = require('express');
 const http = require('http');
 const logger = require('morgan');
 const cors = require('cors');
-
+ 
+const userRoutes = require('./routes/user_routes');
 const app = express();
 app.use(logger());
 app.use(express.json());
@@ -15,7 +16,8 @@ const server = http.createServer(app);
 
 const port = process.env.PORT || 3000;
 app.set('port', port);
-
+// routes
+userRoutes(app);
 server.listen(port, 'localhost', () => {
   console.log(`Aplicación NodeJS ${process.pid} Iniciada`)
 });

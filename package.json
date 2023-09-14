@@ -4,9 +4,23 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon server.js --ignore node_modules",
+    "dbmate:new": "npx dbmate -d \"db/migrations\" -e \"DB\" new ",
+    "dbmate:up": "npx dbmate -d \"db/migrations\" -e \"DB\" up",
+    "dbmate:rollback": "npx dbmate -d \"db/migrations\" -e \"DB\" rollback"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "dbmate": "^2.5.0",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.6.1"
+  }
 }

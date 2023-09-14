@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "5a3fe8af-d39c-4636-98f3-3413e2e23eec",
+		"name": "Delivery BackEnd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23055509"
+	},
+	"item": [
+		{
+			"name": "Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test4@gmail.com\",\n    \"name\": \"Test\",\n    \"last_name\": \"First\",\n    \"phone\": \"1231232\",\n    \"image\": \"https://wallpapers.com/images/high/cool-profile-picture-38op6ugjj3nkzjf0.webp\",\n    \"password\": \"pass123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
