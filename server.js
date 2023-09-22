@@ -18,7 +18,7 @@ const port = process.env.PORT || 3000;
 app.set('port', port);
 // routes
 userRoutes(app);
-server.listen(port, 'localhost', () => {
+server.listen(port, '0.0.0.0', () => {
   console.log(`Aplicación NodeJS ${process.pid} Iniciada`)
 });
 
