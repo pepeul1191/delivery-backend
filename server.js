@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const logger = require('morgan');
 const cors = require('cors');
+const passport = require('passport');
  
 const userRoutes = require('./routes/user_routes');
 const app = express();
@@ -11,6 +12,9 @@ app.use(express.urlencoded({
   extended: true
 }));
 app.use(cors());
+app.use(passport.initialize());
+app.use(passport.session());
+require('./config/passport')(passport);
 app.disable('x-powered-by');
 const server = http.createServer(app);
 
